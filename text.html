@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>js 点赞+1特效</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<script type="text/javascript" src="http://www.kasnet.cn/Tpl/Admin/
+default/js/jquery.js"></script> 
+<script type="text/javascript">
+ <!--
+$(document).ready(function(e) {
+    $('a.zhan').click(function(){
+        var left = parseInt($(this).offset().left)+10, top =  parseInt($(this).offset().top)-10, obj=$(this);
+
+        $(this).append('<div id="zhan"><b>+1<\/b></\div>');
+        $('#zhan').css({'position':'absolute','z-index':'1','color':'#C30',
+        'left':left+'px','top':top+'px'});
+        $('#zhan').animate({top:top-20,opacity: 0},1500,
+        function(){
+            $(this).fadeOut(1500).remove();
+            var Num = parseInt(obj.find('span').text());
+               Num++;
+            obj.find('span').text(Num);
+        });
+    return false;
+    });
+});
+ //-->
+</script>
+<style type="text/css">
+
+</style>
+</head>
+    <body>
+    <br/><br/>
+    <a class="zhan" href="#">赞(<span>0</span>)</a>
+    </body>
+</html>
