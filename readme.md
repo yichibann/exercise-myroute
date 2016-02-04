@@ -1,5 +1,7 @@
 # exercise-myroute
   
+  time：2015/11
+  
   ECNU软件学院2015年网赛作品，我负责前端设计和重构，用了bootstrap/jq框架。
   
   第一次和后端小伙伴合作，当时不会用ajax，蛋疼。
